@@ -1,0 +1,20 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+
+namespace PierreTraker.Test
+{
+  [TestClass]
+    public class OrderTests 
+    {
+        public void Dispose()
+    {
+  
+    }
+      [TestMethod]
+      public void Order_Constructor_CreateInstancesOfOrder_Order()
+      {
+        Order newOrder = new Order("Vendors Test", "Order Test", "Prices Test");
+        Assert.AreEqual(typeof(Order), newOrder.GetType());
+      }
+    }
+}    
