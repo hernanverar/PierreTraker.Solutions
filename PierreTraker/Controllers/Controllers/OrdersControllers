@@ -1,0 +1,22 @@
+using Microsoft.AspNetCore.Mvc;
+using VendorsTracker.Models;
+using System.Collections.Generic;
+
+
+namespace PierreTracker.Controllers
+{
+  public class OrdersController : Controller
+  {
+      [HttpGet("/vendors")]
+    public ActionResult Index()
+    {
+      List<Vendors> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+  } 
+}  
